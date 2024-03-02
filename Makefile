@@ -41,7 +41,7 @@
 ## Version 4
 CXX = g++
 TARGET = hello
-SRC = $(wildcard *.cpp)
+SRC = $(wildcard *.cpp helloTest/*.cpp)
 OBJ = $(patsubst %.cpp, %.o, $(SRC))
 
 CXXFLAGS = -c -Wall
@@ -54,4 +54,4 @@ $(TARGET) : $(OBJ)
 
 .PHONY : clean
 clean : 
-	rm -f *.o $(TARGET)
+	rm -f $(OBJ) $(TARGET)
